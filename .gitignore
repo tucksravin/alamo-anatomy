@@ -4,3 +4,12 @@ package-lock.json
 .netlify
 build
 .env
+
+# Yarn v4
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
