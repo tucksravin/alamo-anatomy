@@ -1,0 +1,172 @@
+
+/* Tailwind CSS v4 configuration */
+@import "tailwindcss";
+
+@theme {
+  --screen-sm: 560px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1340px;
+  
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: black;
+  --color-white: white;
+  --color-background: white;
+  --color-light: #7ba0c4;
+  --color-primary: blue;
+  --color-dark: #00263e;
+  --color-secondary: red;
+  --color-accent: yellow;
+
+  --transition-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --transition-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --transition-fast-slow: cubic-bezier(.5, 0, 0, 1);
+  
+  --height-screen-75: 75vh;
+  --height-screen-50: 50vh;
+  --height-screen-25: 25vh;
+  --height-screen-10: 10vh;
+  --height-screen-5: 5vh;
+  --height-112: 28rem;
+  --height-128: 32rem;
+  --height-144: 36rem;
+  --height-160: 40rem;
+  --height-192: 48rem;
+  --height-256: 64rem;
+  --height-384: 96rem;
+  --height-512: 128rem;
+  --height-640: 160rem;
+}
+
+@utility bump {
+  &:active {
+    --tw-translate-y: -1px;
+  }
+}
+
+@utility negative-bump {
+  &:active {
+    --tw-translate-y: 1px;
+  }
+}
+
+@layer base{
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "helvetica", sans-serif;
+    max-width: 100vw;
+    overflow-x: clip;
+    scrollbar-width: none !important;
+    overflow-y: auto;
+    margin:0;
+    background-color: var(--color-background);
+}
+
+body::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+}
+
+
+
+@keyframes pos-y-wiggle {
+    0% {
+        transform: translateY(1px);
+    }
+    50% {
+        transform: translateY(-1px);
+    }
+    100% {
+        transform: translateY(1px);
+    }
+}
+.bob-on-hover:hover {
+    animation-name: pos-y-wiggle;
+    animation-play-state: running;
+}
+
+.bob-always{
+
+    animation: 1s infinite forwards pos-y-wiggle ease-out;
+}
+
+@keyframes pulse-scale {
+    0% {
+        transform: scale(1.01);
+    }
+    50% {
+        transform: scale(0.99);
+    }
+    100% {
+        transform: scale(1.01);
+    }
+}
+
+.pulse-always{
+    animation: 1.5s infinite forwards pulse-scale ease-out;
+}
+
+
+a, button{
+    cursor: pointer;
+}
+
+
+
+h1{ 
+    /* */ 
+}
+h2{ 
+    /**/ 
+}
+h3{
+     /* */ 
+    }
+h4{ 
+    /* */ 
+}
+h5{ 
+    /* */ 
+}
+h6{ 
+    /* */ 
+}
+p{ 
+    /* */ 
+}
+
+@media (max-width: 768px) {
+    h1{ /* */ }
+    h2{ /* */ }
+    h3{ /* */ }
+    h4{ /* */ }
+    h5{ /* */ }
+    h6{ /* */ }
+    p{ /* */ }
+}
+
+span{
+    display: inline-block;
+}
+
+
+	.add-noise::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: radial-gradient(circle, rgba(255,255,255,0.05) 0.5px, transparent 0.5px);
+		background-size: 1px 1px;
+		opacity: 0.4;
+		pointer-events: none;
+		will-change: transform;
+		filter: blur(0.5px);
+	}
+}
