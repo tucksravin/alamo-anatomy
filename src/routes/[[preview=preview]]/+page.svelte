@@ -12,11 +12,17 @@
 
 <!-- Hero -->
 
-<section class="bg-dark min-h-[60vh]">
+<section class="bg-dark lg:min-h-[60vh]">
   <ContentWidth
-    class="h-full min-h-[60vh] flex flex-col justify-start items-end pt-48 pb-60 text-light text-left relative"
+    class="h-full lg:min-h-[60vh] flex flex-col justify-start items-start lg:items-end pt-32 pb-24 lg:pt-48 lg:pb-60 text-light text-left relative"
   >
-    <div class="w-1/3">
+    <img
+      src={logo}
+      alt="Alamo Anatomy Training Institute"
+      class="lg:absolute bottom-0 left-0 w-full lg:w-3/4"
+    />
+
+    <div class="w-full lg:w-1/3 mt-16 lg:mt-0">
       <PrismicRichText field={d.s1_subtitle} />
 
       {#if d.s1_button?.text}
@@ -25,12 +31,6 @@
         </DefaultButton>
       {/if}
     </div>
-
-    <img
-      src={logo}
-      alt="Alamo Anatomy Training Institute"
-      class="absolute bottom-0 left-0 w-3/4"
-    />
   </ContentWidth>
 </section>
 
@@ -105,7 +105,7 @@
         </div>
         {#if d.s5_button?.text}
           <DefaultButton href={asLink(d.s5_button) ?? ""}>
-            {d.s5_button.text} <span class="ml-2">&rarr;</span>
+            {d.s5_button.text} <i class="fa-solid fa-arrow-right ml-2"></i>
           </DefaultButton>
         {/if}
       </div>
