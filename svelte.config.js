@@ -7,7 +7,10 @@ const config = {
 		warningFilter: (warning) => warning.code !== 'element_invalid_self_closing_tag'
 	},
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			handleHttpError: 'warn'
+		}
 	},
 	preprocess: vitePreprocess(),
 };
