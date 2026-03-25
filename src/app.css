@@ -1,6 +1,7 @@
 
 /* Tailwind CSS v4 configuration */
 @import "tailwindcss";
+@source "../src";
 
 @theme {
   --screen-sm: 560px;
@@ -12,12 +13,12 @@
   --color-current: currentColor;
   --color-black: black;
   --color-white: white;
-  --color-background: white;
-  --color-light: #7ba0c4;
-  --color-primary: blue;
-  --color-dark: #00263e;
-  --color-secondary: red;
-  --color-accent: yellow;
+  --color-background: #F1F6F7;
+  --color-light: #DDF4F3;
+  --color-primary: #144E40;
+  --color-dark: #144E40;
+  --color-secondary: #DDF4F3;
+  --color-accent: #DDF4F3;
 
   --transition-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   --transition-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
@@ -51,6 +52,10 @@
   }
 }
 
+@utility btn-bump {
+  translate: 0 -5rem;
+}
+
 @layer base{
 
 html{
@@ -58,7 +63,11 @@ html{
 }
 
 body{
-    font-family: "helvetica", sans-serif;
+    font-family: "area-normal", "helvetica", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--color-dark);
     max-width: 100vw;
     overflow-x: clip;
     scrollbar-width: none !important;
@@ -114,21 +123,34 @@ body::-webkit-scrollbar {
 
 a, button{
     cursor: pointer;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 15px */
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
 
-h1{ 
-    /* */ 
+h1{
+    font-size: 66px;
+    line-height: 1.2em;
 }
-h2{ 
-    /**/ 
+h2{
+    font-size: 38px;
+    line-height: 1.26em;
 }
 h3{
-     /* */ 
-    }
-h4{ 
-    /* */ 
+    font-size: 24px;
+    line-height: 1.45em;
+
+}
+h4{
+    font-size: 14px;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 h5{ 
     /* */ 
@@ -141,7 +163,7 @@ p{
 }
 
 @media (max-width: 768px) {
-    h1{ /* */ }
+    h1{ font-size: 48px }
     h2{ /* */ }
     h3{ /* */ }
     h4{ /* */ }
