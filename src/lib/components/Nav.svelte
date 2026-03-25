@@ -9,6 +9,12 @@
 	let scrollY = $state(0);
 	const isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/preview');
 	const showLogo = $derived(!isHome || (typeof window !== 'undefined' && scrollY > window.innerHeight * 0.6 - 64));
+
+	$effect(() => {
+		if (typeof document !== 'undefined') {
+			document.body.style.overflow = menuOpen ? 'hidden' : '';
+		}
+	});
 </script>
 
 <svelte:window bind:scrollY={scrollY} />
@@ -31,7 +37,7 @@
 {#if menuOpen}
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="fixed inset-0 z-40 bg-dark/90 backdrop-blur-3xl flex flex-col items-center justify-center gap-8 text-white text-2xl"
+		class="fixed inset-0 z-40 bg-dark/90 backdrop-blur-lg flex flex-col items-center justify-center gap-8 text-white text-2xl"
 		onclick={() => menuOpen = false}
 		onkeydown={(e) => { if (e.key === 'Escape') menuOpen = false; }}
 		transition:fade
