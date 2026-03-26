@@ -21,7 +21,7 @@
 
 <nav class="fixed top-0 left-0 w-full z-50 h-16 bg-dark/40 backdrop-blur-lg">
 <ContentWidth class="flex items-center h-full justify-between">
-	<a href="/" class="transition-opacity duration-300 {showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'}">
+	<a href="/" class="transition-opacity duration-300 {showLogo ? 'opacity-100' : 'opacity-5 pointer-events-none'}">
 		<img src={mark} alt="AATI" class="w-10 h-10" />
 	</a>
 
