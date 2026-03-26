@@ -120,7 +120,7 @@
           {#each d.s6_boxes as box}
             <div class="flex flex-col items-center text-center gap-3">
               <PrismicImage field={box.icon} class="w-12 h-12 object-contain" />
-              <h4>{box.label}</h4>
+              <h5>{box.label}</h5>
             </div>
           {/each}
         </div>
