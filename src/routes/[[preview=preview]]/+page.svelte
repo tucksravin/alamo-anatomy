@@ -5,6 +5,7 @@
   import ContentWidth from "$lib/components/ContentWidth.svelte";
   import DefaultButton from "$lib/components/DefaultButton.svelte";
   import logo from "$lib/assets/images/logos/typeLight.svg";
+  import mark from "$lib/assets/images/logos/mark.svg"
 
   let { data } = $props();
   const d = $derived(data.page.data);
@@ -16,6 +17,9 @@
   <ContentWidth
     class="h-full lg:min-h-[60vh] flex flex-col justify-start items-start lg:items-end pt-32 pb-24 lg:pt-48 lg:pb-60 text-light text-left relative"
   >
+
+  <img src={mark} alt="AATI" class="top-16 left-0 absolute w-24 h-24 md:w-40 md:h-40 opacity-8  "/>
+
     <img
       src={logo}
       alt="Alamo Anatomy Training Institute"

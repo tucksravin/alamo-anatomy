@@ -1,9 +1,11 @@
 <script lang="ts">
 	import mark from '$lib/assets/images/logos/mark.svg';
+
   import { fade } from 'svelte/transition';
   import { page } from '$app/state';
   import ContentWidth from './ContentWidth.svelte';
   import DefaultButton from './DefaultButton.svelte';
+  
 
 	let menuOpen = $state(false);
 	let scrollY = $state(0);
@@ -21,9 +23,10 @@
 
 <nav class="fixed top-0 left-0 w-full z-50 h-16 bg-dark/40 backdrop-blur-lg">
 <ContentWidth class="flex items-center h-full justify-between">
-	<a href="/" class="transition-opacity duration-300 {showLogo ? 'opacity-100' : 'opacity-5 pointer-events-none'}">
+	<a href="/" class="transition-opacity duration-300 {showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'}">
 		<img src={mark} alt="AATI" class="w-10 h-10" />
 	</a>
+
 
 	<div class="h-full flex items-center relative gap-4">
 		<DefaultButton href="/contact">Contact Us</DefaultButton>
