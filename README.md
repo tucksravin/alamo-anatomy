@@ -28,7 +28,7 @@ This library grows as new interactive functions or layouts are needed, allowing 
 2. Install dependencies:
 
    ```bash
-   yarn install
+   pnpm install
    ```
 
 3. Create a new Prismic repository
@@ -36,7 +36,7 @@ This library grows as new interactive functions or layouts are needed, allowing 
 5. Start the dev server (runs Vite + Slice Machine concurrently):
 
    ```bash
-   yarn dev
+   pnpm dev
    ```
 
 6. Push your custom types/slices to Prismic
@@ -46,14 +46,14 @@ This library grows as new interactive functions or layouts are needed, allowing 
 
 | Command | Description |
 | --- | --- |
-| `yarn dev` | Start dev server + Slice Machine |
-| `yarn build` | Production build |
-| `yarn preview` | Preview production build |
-| `yarn check` | Svelte type checking |
-| `yarn lint` | Lint with ESLint + Prettier |
-| `yarn format` | Auto-format with Prettier |
-| `yarn test` | Run tests with Vitest |
-| `yarn slicemachine` | Start Slice Machine UI |
+| `pnpm dev` | Start dev server + Slice Machine |
+| `pnpm build` | Production build |
+| `pnpm preview` | Preview production build |
+| `pnpm check` | Svelte type checking |
+| `pnpm lint` | Lint with ESLint + Prettier |
+| `pnpm format` | Auto-format with Prettier |
+| `pnpm test` | Run tests with Vitest |
+| `pnpm slicemachine` | Start Slice Machine UI |
 
 ## Project Structure
 

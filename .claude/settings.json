@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/Users/tuckerlemos/.nvm/versions/node/v24.14.1/bin/pnpm --version)"
+    ]
+  }
+}
