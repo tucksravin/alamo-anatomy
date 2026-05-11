@@ -451,7 +451,692 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = HomeDocument | PageDocument;
+/**
+ * Item in *About → s4 boxes*
+ */
+export interface AboutDocumentDataS4BoxesItem {
+  /**
+   * icon field in *About → s4 boxes*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s4_boxes[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * label field in *About → s4 boxes*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s4_boxes[].label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Content for About documents
+ */
+interface AboutDocumentData {
+  /**
+   * Title field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * s1 eyebrow field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: ABOUT
+   * - **API ID Path**: about.s1_eyebrow
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  s1_eyebrow: prismic.KeyTextField;
+
+  /**
+   * s1 heading field in *About*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s1_heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  s1_heading: prismic.RichTextField;
+
+  /**
+   * s2 vimeo id field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s2_vimeo_id
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  s2_vimeo_id: prismic.KeyTextField;
+
+  /**
+   * s2 image field in *About*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s2_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  s2_image: prismic.ImageField<never>;
+
+  /**
+   * s3 left body field in *About*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s3_left_body
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  s3_left_body: prismic.RichTextField;
+
+  /**
+   * s3 right body field in *About*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s3_right_body
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  s3_right_body: prismic.RichTextField;
+
+  /**
+   * s3 button field in *About*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s3_button
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  s3_button: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * s4 heading field in *About*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: We Support Your Training.
+   * - **API ID Path**: about.s4_heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  s4_heading: prismic.RichTextField;
+
+  /**
+   * s4 boxes field in *About*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s4_boxes[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  s4_boxes: prismic.GroupField<Simplify<AboutDocumentDataS4BoxesItem>>;
+
+  /**
+   * s5 image field in *About*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s5_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  s5_image: prismic.ImageField<never>;
+
+  /**
+   * s5 eyebrow field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Our Partner
+   * - **API ID Path**: about.s5_eyebrow
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  s5_eyebrow: prismic.KeyTextField;
+
+  /**
+   * s5 logo field in *About*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s5_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  s5_logo: prismic.ImageField<never>;
+
+  /**
+   * s5 body field in *About*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s5_body
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  s5_body: prismic.RichTextField;
+
+  /**
+   * s5 button field in *About*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.s5_button
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  s5_button: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Meta Title field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: about.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: about.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *About*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * About document from Prismic
+ *
+ * - **API ID**: `about`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
+
+/**
+ * Item in *Facility → s3 carousel images*
+ */
+export interface FacilityDocumentDataS3ImagesItem {
+  /**
+   * image field in *Facility → s3 carousel images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: facility.s3_images[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Facility → s4 boxes*
+ */
+export interface FacilityDocumentDataS4BoxesItem {
+  /**
+   * icon field in *Facility → s4 boxes*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: facility.s4_boxes[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * label field in *Facility → s4 boxes*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: facility.s4_boxes[].label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Content for Facility documents
+ */
+interface FacilityDocumentData {
+  /**
+   * Title field in *Facility*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: facility.title
+   * - **Tab**: Main
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * s1 eyebrow field in *Facility*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: facility.s1_eyebrow
+   * - **Tab**: Main
+   */
+  s1_eyebrow: prismic.KeyTextField;
+
+  /**
+   * s1 heading field in *Facility*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: facility.s1_heading
+   * - **Tab**: Main
+   */
+  s1_heading: prismic.RichTextField;
+
+  /**
+   * s2 vimeo id field in *Facility*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: facility.s2_vimeo_id
+   * - **Tab**: Main
+   */
+  s2_vimeo_id: prismic.KeyTextField;
+
+  /**
+   * s2 image field in *Facility*
+   *
+   * - **Field Type**: Image
+   * - **API ID Path**: facility.s2_image
+   * - **Tab**: Main
+   */
+  s2_image: prismic.ImageField<never>;
+
+  /**
+   * s3 carousel images field in *Facility*
+   *
+   * - **Field Type**: Group
+   * - **API ID Path**: facility.s3_images[]
+   * - **Tab**: Main
+   */
+  s3_images: prismic.GroupField<Simplify<FacilityDocumentDataS3ImagesItem>>;
+
+  /**
+   * s3 body field in *Facility*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: facility.s3_body
+   * - **Tab**: Main
+   */
+  s3_body: prismic.RichTextField;
+
+  /**
+   * s3 button field in *Facility*
+   *
+   * - **Field Type**: Link
+   * - **API ID Path**: facility.s3_button
+   * - **Tab**: Main
+   */
+  s3_button: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * s4 heading field in *Facility*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: facility.s4_heading
+   * - **Tab**: Main
+   */
+  s4_heading: prismic.RichTextField;
+
+  /**
+   * s4 boxes field in *Facility*
+   *
+   * - **Field Type**: Group
+   * - **API ID Path**: facility.s4_boxes[]
+   * - **Tab**: Main
+   */
+  s4_boxes: prismic.GroupField<Simplify<FacilityDocumentDataS4BoxesItem>>;
+
+  /**
+   * s4 button field in *Facility*
+   *
+   * - **Field Type**: Link
+   * - **API ID Path**: facility.s4_button
+   * - **Tab**: Main
+   */
+  s4_button: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * s5 map embed src URL field in *Facility*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: facility.s5_map_embed_url
+   * - **Tab**: Main
+   */
+  s5_map_embed_url: prismic.KeyTextField;
+
+  /**
+   * s5 eyebrow field in *Facility*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: facility.s5_eyebrow
+   * - **Tab**: Main
+   */
+  s5_eyebrow: prismic.KeyTextField;
+
+  /**
+   * s5 body field in *Facility*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: facility.s5_body
+   * - **Tab**: Main
+   */
+  s5_body: prismic.RichTextField;
+
+  /**
+   * s5 info block field in *Facility*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: facility.s5_info
+   * - **Tab**: Main
+   */
+  s5_info: prismic.RichTextField;
+
+  /**
+   * Meta Title field in *Facility*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: facility.meta_title
+   * - **Tab**: SEO & Metadata
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Facility*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: facility.meta_description
+   * - **Tab**: SEO & Metadata
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Facility*
+   *
+   * - **Field Type**: Image
+   * - **API ID Path**: facility.meta_image
+   * - **Tab**: SEO & Metadata
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Facility document from Prismic
+ *
+ * - **API ID**: `facility`
+ * - **Repeatable**: `false`
+ */
+export type FacilityDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<FacilityDocumentData>, "facility", Lang>;
+
+/**
+ * Content for Contact documents
+ */
+interface ContactDocumentData {
+  /**
+   * Title field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: contact.title
+   * - **Tab**: Main
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * s1 eyebrow field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: contact.s1_eyebrow
+   * - **Tab**: Main
+   */
+  s1_eyebrow: prismic.KeyTextField;
+
+  /**
+   * s1 heading field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: contact.s1_heading
+   * - **Tab**: Main
+   */
+  s1_heading: prismic.RichTextField;
+
+  /**
+   * s1 subheading field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: contact.s1_subheading
+   * - **Tab**: Main
+   */
+  s1_subheading: prismic.RichTextField;
+
+  /**
+   * s1 button label field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: contact.s1_button_label
+   * - **Tab**: Main
+   */
+  s1_button_label: prismic.KeyTextField;
+
+  /**
+   * s2 map embed URL field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: contact.s2_map_embed_url
+   * - **Tab**: Main
+   */
+  s2_map_embed_url: prismic.KeyTextField;
+
+  /**
+   * s2 eyebrow field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: contact.s2_eyebrow
+   * - **Tab**: Main
+   */
+  s2_eyebrow: prismic.KeyTextField;
+
+  /**
+   * s2 body field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: contact.s2_body
+   * - **Tab**: Main
+   */
+  s2_body: prismic.RichTextField;
+
+  /**
+   * s2 info block field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: contact.s2_info
+   * - **Tab**: Main
+   */
+  s2_info: prismic.RichTextField;
+
+  /**
+   * Meta Title field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: contact.meta_title
+   * - **Tab**: SEO & Metadata
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: contact.meta_description
+   * - **Tab**: SEO & Metadata
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Contact*
+   *
+   * - **Field Type**: Image
+   * - **API ID Path**: contact.meta_image
+   * - **Tab**: SEO & Metadata
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Contact document from Prismic
+ *
+ * - **API ID**: `contact`
+ * - **Repeatable**: `false`
+ */
+export type ContactDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<ContactDocumentData>, "contact", Lang>;
+
+/**
+ * Content for Reserve documents
+ */
+interface ReserveDocumentData {
+  /**
+   * Title field in *Reserve*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: reserve.title
+   * - **Tab**: Main
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * s1 heading field in *Reserve*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: reserve.s1_heading
+   * - **Tab**: Main
+   */
+  s1_heading: prismic.RichTextField;
+
+  /**
+   * s1 subheading field in *Reserve*
+   *
+   * - **Field Type**: Rich Text
+   * - **API ID Path**: reserve.s1_subheading
+   * - **Tab**: Main
+   */
+  s1_subheading: prismic.RichTextField;
+
+  /**
+   * s1 button label field in *Reserve*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: reserve.s1_button_label
+   * - **Tab**: Main
+   */
+  s1_button_label: prismic.KeyTextField;
+
+  /**
+   * Meta Title field in *Reserve*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: reserve.meta_title
+   * - **Tab**: SEO & Metadata
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Reserve*
+   *
+   * - **Field Type**: Text
+   * - **API ID Path**: reserve.meta_description
+   * - **Tab**: SEO & Metadata
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Reserve*
+   *
+   * - **Field Type**: Image
+   * - **API ID Path**: reserve.meta_image
+   * - **Tab**: SEO & Metadata
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Reserve document from Prismic
+ *
+ * - **API ID**: `reserve`
+ * - **Repeatable**: `false`
+ */
+export type ReserveDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<ReserveDocumentData>, "reserve", Lang>;
+
+export type AllDocumentTypes =
+  | HomeDocument
+  | PageDocument
+  | AboutDocument
+  | FacilityDocument
+  | ContactDocument
+  | ReserveDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -482,6 +1167,17 @@ declare module "@prismicio/client" {
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      AboutDocument,
+      AboutDocumentData,
+      AboutDocumentDataS4BoxesItem,
+      FacilityDocument,
+      FacilityDocumentData,
+      FacilityDocumentDataS3ImagesItem,
+      FacilityDocumentDataS4BoxesItem,
+      ContactDocument,
+      ContactDocumentData,
+      ReserveDocument,
+      ReserveDocumentData,
       AllDocumentTypes,
     };
   }

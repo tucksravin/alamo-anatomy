@@ -21,7 +21,7 @@
 
 <svelte:window bind:scrollY={scrollY} />
 
-<nav class="fixed top-0 left-0 w-full z-50 h-16 bg-dark/40 backdrop-blur-lg">
+<nav class="fixed top-0 left-0 w-full z-50 h-16 bg-dark/80 backdrop-blur-lg">
 <ContentWidth class="flex items-center h-full justify-between">
 	<a href="/" class="transition-opacity duration-300 {showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'}">
 		<img src={mark} alt="AATI" class="w-10 h-10" />
@@ -49,6 +49,7 @@
 		<a href="/" class="hover:opacity-70 transition"><h3>Home</h3></a>
 		<a href="/about" class="hover:opacity-70 transition"><h3>About Us</h3></a>
 		<a href="/facility" class="hover:opacity-70 transition"><h3>Our Facility</h3></a>
+		<a href="/reserve" class="hover:opacity-70 transition"><h3>Reserve Lab</h3></a>
 		<a href="/contact" class="hover:opacity-70 transition"><h3>Contact Us</h3></a>
 	</div>
 {/if}

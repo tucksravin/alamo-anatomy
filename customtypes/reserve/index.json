@@ -1,0 +1,70 @@
+{
+  "format": "page",
+  "id": "reserve",
+  "label": "Reserve",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "s1_heading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "s1 heading",
+          "placeholder": "Reserve the Lab",
+          "allowTargetBlank": true,
+          "multi": "heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink"
+        }
+      },
+      "s1_subheading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "s1 subheading",
+          "placeholder": "Send your message on the form and we'll get right back to you!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "s1_button_label": {
+        "type": "Text",
+        "config": {
+          "label": "s1 submit button label",
+          "placeholder": "Send Request"
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

@@ -1,7 +1,27 @@
 {
   "permissions": {
     "allow": [
-      "Bash(/Users/tuckerlemos/.nvm/versions/node/v24.14.1/bin/pnpm --version)"
+      "Bash(/Users/tuckerlemos/.nvm/versions/node/v24.14.1/bin/pnpm --version)",
+      "Bash(curl -s -o /tmp/reserve_design.png \"https://www.figma.com/api/mcp/asset/30b2daab-42f6-46b5-bce4-9dd9f682e184\")",
+      "Bash(rm /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/routes/\\\\[\\\\[preview=preview\\\\]\\\\]/reserve/+page.server.ts)",
+      "Bash(:)",
+      "Bash(mkdir -p ~/Desktop/alamo-anatomy-photos/facility ~/Desktop/alamo-anatomy-photos/about)",
+      "Bash(curl -sS -o carousel-main-1.png \"https://www.figma.com/api/mcp/asset/7b715799-d8ab-4c99-88b5-38b60a01d774\")",
+      "Bash(curl -sS -o carousel-main-2.png \"https://www.figma.com/api/mcp/asset/11fa6258-a4be-408a-ad9a-b0ce7d8ee0a3\")",
+      "Bash(curl -sS -o carousel-thumb-1.png \"https://www.figma.com/api/mcp/asset/3224ca94-8480-46ad-80a1-ce7bae8d564d\")",
+      "Bash(curl -sS -o carousel-thumb-2.png \"https://www.figma.com/api/mcp/asset/4a2d081a-7947-4431-9464-23b9677cf8a0\")",
+      "Bash(curl -sS -o masthead.png \"https://www.figma.com/api/mcp/asset/5b091400-8e2d-44b3-bb43-a4729541766c\")",
+      "Bash(curl -sS -o s5-operating-room.png \"https://www.figma.com/api/mcp/asset/452bac4b-f043-4e0b-a0c0-a760bdc6cec8\")",
+      "Bash(curl -sS -o s5-la-cantera-resort.png \"https://www.figma.com/api/mcp/asset/05fb338b-bbec-42db-9f1f-ac4ab81be265\")",
+      "Bash(curl -sS -o s5-signia-hilton-logo.png \"https://www.figma.com/api/mcp/asset/9148f3f5-402b-47c8-9db4-b570b6439ddb\")",
+      "Bash(curl -sS -o ~/Desktop/alamo-anatomy-photos/facility/masthead.png \"https://www.figma.com/api/mcp/asset/3605490d-1080-4a4c-ae4d-13cd030a0af1\")",
+      "Bash(python3 -m json.tool /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/customtypes/facility/index.json)",
+      "Bash(: > /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/routes/\\\\[\\\\[preview=preview\\\\]\\\\]/contact/+page.svelte && wc -l /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/routes/\\\\[\\\\[preview=preview\\\\]\\\\]/contact/+page.svelte)",
+      "Bash(python3 -m json.tool /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/customtypes/contact/index.json)",
+      "Bash(python3 -m json.tool /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/customtypes/reserve/index.json)"
+    ],
+    "additionalDirectories": [
+      "/Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/routes/[[preview=preview]]/contact"
     ]
   }
 }

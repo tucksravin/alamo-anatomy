@@ -1,0 +1,109 @@
+{
+  "format": "page",
+  "id": "contact",
+  "label": "Contact",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "s1_eyebrow": {
+        "type": "Text",
+        "config": {
+          "label": "s1 eyebrow",
+          "placeholder": "Contact Us"
+        }
+      },
+      "s1_heading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "s1 heading",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink"
+        }
+      },
+      "s1_subheading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "s1 subheading",
+          "placeholder": "Send your message on the form and we'll get right back to you!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "s1_button_label": {
+        "type": "Text",
+        "config": {
+          "label": "s1 submit button label",
+          "placeholder": "Send Message"
+        }
+      },
+      "s2_map_embed_url": {
+        "type": "Text",
+        "config": {
+          "label": "s2 map embed (paste full <iframe …> code or just the src URL)",
+          "placeholder": "<iframe src=\"https://www.google.com/maps/embed?pb=...\" …></iframe>"
+        }
+      },
+      "s2_eyebrow": {
+        "type": "Text",
+        "config": {
+          "label": "s2 eyebrow",
+          "placeholder": "Alamo Anatomy Training Institute"
+        }
+      },
+      "s2_body": {
+        "type": "StructuredText",
+        "config": {
+          "label": "s2 body",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "s2_info": {
+        "type": "StructuredText",
+        "config": {
+          "label": "s2 info block (address, phone, hours)",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
