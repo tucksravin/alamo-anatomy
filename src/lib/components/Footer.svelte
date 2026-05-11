@@ -20,7 +20,7 @@
 			<nav class="flex flex-col gap-2 sm:gap-6 text-sm uppercase tracking-wider mt-8 md:mt-24">
 				<a href="/about" class="hover:opacity-70 transition">About Us</a>
 				<a href="/facility" class="hover:opacity-70 transition">Our Facility</a>
-				<a href="/210-taclabs" class="hover:opacity-70 transition">210 TacLabs</a>
+				<a href="https://courses.cadaverlabsa.com/" target="_blank" rel="noopener" class="hover:opacity-70 transition">210 TacLabs</a>
 				<a href="/contact" class="hover:opacity-70 transition">Contact Us</a>
 			</nav>
 			<p class="text-xs opacity-60 mt-6">&copy; {new Date().getFullYear()} Alamo Anatomy Training Institute.<br />All Rights Reserved.</p>

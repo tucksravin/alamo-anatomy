@@ -29,6 +29,7 @@
       <form
         name="reserve"
         method="POST"
+        action="/thank-you"
         data-netlify="true"
         netlify-honeypot="bot-field"
         class="flex flex-col gap-10"
