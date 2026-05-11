@@ -48,12 +48,12 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-5">
-          <input type="text" name="first_name" placeholder="First Name*" required class={inputClass} />
-          <input type="text" name="last_name" placeholder="Last Name*" required class={inputClass} />
+          <input type="text" name="first_name" placeholder="First Name*" aria-label="First Name" required class={inputClass} />
+          <input type="text" name="last_name" placeholder="Last Name*" aria-label="Last Name" required class={inputClass} />
         </div>
-        <input type="email" name="email" placeholder="Email*" required class={inputClass} />
-        <input type="tel" name="phone" placeholder="Phone*" required class={inputClass} />
-        <textarea name="message" placeholder="Comments or Questions" rows="6" class={textareaClass}></textarea>
+        <input type="email" name="email" placeholder="Email*" aria-label="Email" required class={inputClass} />
+        <input type="tel" name="phone" placeholder="Phone*" aria-label="Phone" required class={inputClass} />
+        <textarea name="message" placeholder="Comments or Questions" aria-label="Comments or Questions" rows="6" class={textareaClass}></textarea>
 
         <div>
           <DefaultButton>

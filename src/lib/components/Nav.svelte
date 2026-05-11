@@ -31,7 +31,11 @@
 	<div class="h-full flex items-center relative gap-4">
 		<DefaultButton href="/contact">Contact Us</DefaultButton>
 		<button onclick={() => menuOpen = !menuOpen} class="text-light hover:text-white transition duration-400 text-2xl flex items-center justify-center" aria-label="Toggle menu">
-			<i class="fa-solid fa-sharp fa-bars"></i>
+			<svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+				<rect width="20" height="2" rx="1" />
+				<rect y="7" width="20" height="2" rx="1" />
+				<rect y="14" width="20" height="2" rx="1" />
+			</svg>
 		</button>
 	</div>
 </ContentWidth>

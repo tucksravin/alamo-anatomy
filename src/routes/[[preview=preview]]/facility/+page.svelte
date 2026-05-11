@@ -73,7 +73,9 @@
             aria-label="Previous image"
             class="shrink-0 w-10 h-10 rounded-full border border-dark flex items-center justify-center hover:bg-dark hover:text-light transition"
           >
-            <i class="fa-solid fa-arrow-left"></i>
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M15 6H1M1 6L6 1M1 6L6 11" />
+            </svg>
           </button>
           <div class="flex-1 flex gap-2 overflow-x-auto no-scrollbar">
             {#each images as img, i}
@@ -96,7 +98,9 @@
             aria-label="Next image"
             class="shrink-0 w-10 h-10 rounded-full border border-dark flex items-center justify-center hover:bg-dark hover:text-light transition"
           >
-            <i class="fa-solid fa-arrow-right"></i>
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 6H15M15 6L10 1M15 6L10 11" />
+            </svg>
           </button>
         </div>
       {/if}

@@ -2,8 +2,8 @@
     import { afterNavigate, beforeNavigate } from "$app/navigation";
     import { fade } from "svelte/transition";
 
-    const OVERLAY_VISIBLE_DURATION = 1050;
-    const FADE_OUT_DURATION = 700;
+    const OVERLAY_VISIBLE_DURATION = 400;
+    const FADE_OUT_DURATION = 350;
 
     let isTransitioning = $state(false);
 

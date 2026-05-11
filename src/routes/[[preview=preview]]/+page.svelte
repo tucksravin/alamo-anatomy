@@ -109,7 +109,10 @@
         </div>
         {#if d.s5_button?.text}
           <DefaultButton href={asLink(d.s5_button) ?? ""}>
-            {d.s5_button.text} <i class="fa-solid fa-arrow-right ml-2"></i>
+            {d.s5_button.text}
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="inline-block ml-2">
+              <path d="M1 6H15M15 6L10 1M15 6L10 11" />
+            </svg>
           </DefaultButton>
         {/if}
       </div>

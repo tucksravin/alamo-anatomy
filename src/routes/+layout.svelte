@@ -11,6 +11,10 @@
 
 	let { children } = $props();
 
+	const isPreviewOrDev = $derived(
+		import.meta.env.DEV || page.url.pathname.startsWith('/preview')
+	);
+
 	// Force instant scroll-to-top on route change (overrides html { scroll-behavior: smooth })
 	afterNavigate(({ from, to, type }) => {
 		if (type === 'popstate') return; // back/forward — let SvelteKit restore
@@ -61,6 +65,11 @@
 			"openingHours": "Mo-Su 06:00-20:00"
 		})}
 	</script>
+
+	<!-- Prismic toolbar — only for editors viewing previews or in dev -->
+	{#if isPreviewOrDev}
+		<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo={repositoryName}"></script>
+	{/if}
 </svelte:head>
 <a
 	href="#main-content"

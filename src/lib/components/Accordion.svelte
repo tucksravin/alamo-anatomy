@@ -14,7 +14,9 @@
       <button class="w-full border-t-2 border-light cursor-pointer" aria-expanded={activeAccordions[i]} onclick={() => activeAccordions[i] = !activeAccordions[i]}>
         <div class="h-20 p-8 w-full flex flex-row justify-between items-center">
           <p class="text-left">{label}</p>
-          <i class="fa-solid fa-chevron-right transition-transform duration-300 ease-in-out text-sm opacity-80 hover:opacity-100 {activeAccordions[i] ? 'rotate-90' : ''}"></i>
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="transition-transform duration-300 ease-in-out opacity-80 hover:opacity-100 {activeAccordions[i] ? 'rotate-90' : ''}">
+            <path d="M1 1L7 7L1 13" />
+          </svg>
         </div>
         {#if activeAccordions[i]}
           <div transition:slide="{{ duration: 500 }}">

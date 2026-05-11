@@ -47,7 +47,9 @@
                 class="absolute top-4 right-4 text-dark/60 hover:text-dark transition cursor-pointer"
                 aria-label="Close"
             >
-                <i class="fa-solid fa-xmark text-xl"></i>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M4 4L16 16M16 4L4 16" />
+                </svg>
             </button>
             <div class="p-8">
                 {@render children?.()}

@@ -14,6 +14,13 @@ export function datepicker(node: HTMLInputElement, options: Options = {}) {
 		...options
 	});
 
+	// Mirror placeholder + aria-label from original input to flatpickr's visible alt input
+	if (fp.altInput) {
+		if (node.placeholder) fp.altInput.placeholder = node.placeholder;
+		const aria = node.getAttribute('aria-label');
+		if (aria) fp.altInput.setAttribute('aria-label', aria);
+	}
+
 	return {
 		update(newOptions: Options = {}) {
 			Object.entries(newOptions).forEach(([key, value]) => {
