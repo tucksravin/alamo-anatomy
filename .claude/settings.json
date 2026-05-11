@@ -18,7 +18,10 @@
       "Bash(python3 -m json.tool /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/customtypes/facility/index.json)",
       "Bash(: > /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/routes/\\\\[\\\\[preview=preview\\\\]\\\\]/contact/+page.svelte && wc -l /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/routes/\\\\[\\\\[preview=preview\\\\]\\\\]/contact/+page.svelte)",
       "Bash(python3 -m json.tool /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/customtypes/contact/index.json)",
-      "Bash(python3 -m json.tool /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/customtypes/reserve/index.json)"
+      "Bash(python3 -m json.tool /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/customtypes/reserve/index.json)",
+      "Bash(node -e \"console.log\\(require.resolve\\('sharp'\\)\\)\")",
+      "Bash(sips -s format png /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/lib/assets/images/logos/mark.svg --out /tmp/test_mark.png)",
+      "Bash(sips -s format png -z 630 1200 /tmp/og-default.svg --out /Users/tuckerlemos/Documents/GitHub/alamo-anatomy/static/og-default.png)"
     ],
     "additionalDirectories": [
       "/Users/tuckerlemos/Documents/GitHub/alamo-anatomy/src/routes/[[preview=preview]]/contact"
