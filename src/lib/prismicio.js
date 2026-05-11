@@ -15,15 +15,12 @@ export const repositoryName = import.meta.env.VITE_PRISMIC_ENVIRONMENT || config
  * @type {prismic.ClientConfig["routes"]}
  */
 const routes = [
-	{
-		type: 'page',
-		uid: 'home',
-		path: '/'
-	},
-	{
-		type: 'page',
-		path: '/:uid'
-	}
+	{ type: 'home', path: '/' },
+	{ type: 'about', path: '/about' },
+	{ type: 'facility', path: '/facility' },
+	{ type: 'contact', path: '/contact' },
+	{ type: 'reserve', path: '/reserve' },
+	{ type: 'page', path: '/:uid' }
 ];
 
 /**
