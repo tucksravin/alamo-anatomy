@@ -1,5 +1,5 @@
 <script lang="ts">
-	import mark from '$lib/assets/images/logos/mark.svg';
+	import typeLight from '$lib/assets/images/logos/typeLight.svg';
 
   import { fade } from 'svelte/transition';
   import { page } from '$app/state';
@@ -24,7 +24,7 @@
 <nav class="fixed top-0 left-0 w-full z-50 h-16 bg-dark/80 backdrop-blur-lg">
 <ContentWidth class="flex items-center h-full justify-between">
 	<a href="/" class="transition-opacity duration-300 {showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'}">
-		<img src={mark} alt="AATI" class="w-10 h-10" />
+		<img src={typeLight} alt="AATI" class="h-8 w-auto" />
 	</a>
 
 
